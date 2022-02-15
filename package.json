@@ -4,7 +4,7 @@
   },
   "name": "yahoo-finance-webscraper",
   "description": "Node.js module to fetch stock information from Yahoo Finance",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "main": "app.js",
   "devDependencies": {},
   "scripts": {

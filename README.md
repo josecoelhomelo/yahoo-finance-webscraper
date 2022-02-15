@@ -1,1 +1,267 @@
-# yahoo-finance-webscraper
+## Installation
+
+```shell
+$npm i yahoo-finance-webscraper
+```
+
+## Usage
+
+### getSingleStockInfo
+Retrieves information about a single stock symbol
+#### Single output
+```js
+const yf = require('yahoo-finance-webscraper');
+
+yf.getSingleStockInfo('AAPL').then(data => {
+  console.log(data)
+});
+```
+### getStocksInfo
+Retrieves information about a multiple stock symbols
+#### Multiple outputs
+```js
+const yf = require('yahoo-finance-webscraper');
+
+const stocks = ['AAPL', 'TSLA'];
+
+yf.getStocksInfo(stocks).then(data => {
+  console.log(data)
+});
+```
+## Examples
+
+### Single output example
+
+```js
+{
+  language: 'en-US',
+  region: 'US',
+  quoteType: 'EQUITY',
+  quoteSourceName: 'Delayed Quote',
+  triggerable: true,
+  currency: 'USD',
+  esgPopulated: false,
+  exchange: 'NMS',
+  shortName: 'Apple Inc.',
+  longName: 'Apple Inc.',
+  messageBoardId: 'finmb_24937',
+  exchangeTimezoneName: 'America/New_York',
+  exchangeTimezoneShortName: 'EST',
+  gmtOffSetMilliseconds: -18000000,
+  market: 'us_market',
+  marketState: 'POSTPOST',
+  tradeable: false,
+  firstTradeDateMilliseconds: 345479400000,
+  priceHint: 2,
+  postMarketChangePercent: -0.11549542,
+  postMarketTime: 1613782798,
+  postMarketPrice: 129.72,
+  postMarketChange: -0.1499939,
+  regularMarketChange: 0.1599884,
+  regularMarketChangePercent: 0.123343155,
+  regularMarketTime: 1613768401,
+  regularMarketPrice: 129.87,
+  regularMarketDayHigh: 130.71,
+  regularMarketDayRange: '128.8 - 130.71',
+  regularMarketDayLow: 128.8,
+  regularMarketVolume: 87668834,
+  bid: 129.64,
+  regularMarketPreviousClose: 129.71,
+  ask: 129.74,
+  bidSize: 12,
+  askSize: 8,
+  fullExchangeName: 'NasdaqGS',
+  financialCurrency: 'USD',
+  regularMarketOpen: 130.24,
+  averageDailyVolume3Month: 103377978,
+  averageDailyVolume10Day: 78513914,
+  fiftyTwoWeekLowChange: 76.7175,
+  fiftyTwoWeekLowChangePercent: 1.443347,
+  fiftyTwoWeekRange: '53.1525 - 145.09',
+  fiftyTwoWeekHighChange: -15.220001,
+  fiftyTwoWeekHighChangePercent: -0.10490042,
+  fiftyTwoWeekLow: 53.1525,
+  fiftyTwoWeekHigh: 145.09,
+  dividendDate: 1613001600,
+  earningsTimestamp: 1611765000,
+  earningsTimestampStart: 1619607540,
+  earningsTimestampEnd: 1620043200,
+  trailingAnnualDividendRate: 0.807,
+  trailingPE: 35.22376,
+  trailingAnnualDividendYield: 0.0062215705,
+  epsTrailingTwelveMonths: 3.687,
+  epsForward: 4.68,
+  epsCurrentYear: 4.45,
+  priceEpsCurrentYear: 29.184269,
+  sharesOutstanding: 16788100096,
+  bookValue: 3.936,
+  fiftyDayAverage: 133.6412,
+  fiftyDayAverageChange: -3.7712097,
+  fiftyDayAverageChangePercent: -0.028218914,
+  twoHundredDayAverage: 122.14779,
+  twoHundredDayAverageChangePercent: 0.06322019,
+  marketCap: 2180270522368,
+  forwardPE: 27.75,
+  priceToBook: 32.995426,
+  sourceInterval: 15,
+  exchangeDataDelayedBy: 0,
+  displayName: 'Apple',
+  symbol: 'AAPL'
+}
+```
+
+### Multiple output example
+
+```js
+[
+  {
+    language: 'en-US',
+    region: 'US',
+    quoteType: 'EQUITY',
+    quoteSourceName: 'Delayed Quote',
+    triggerable: true,
+    currency: 'USD',
+    marketState: 'POSTPOST',
+    exchange: 'NMS',
+    shortName: 'Tesla, Inc.',
+    longName: 'Tesla, Inc.',
+    messageBoardId: 'finmb_27444752',
+    exchangeTimezoneName: 'America/New_York',
+    exchangeTimezoneShortName: 'EST',
+    gmtOffSetMilliseconds: -18000000,
+    market: 'us_market',
+    esgPopulated: false,
+    postMarketChangePercent: 0.14079568,
+    postMarketTime: 1613782799,
+    postMarketPrice: 782.4,
+    postMarketChange: 1.1000366,
+    regularMarketChange: -6.080017,
+    regularMarketChangePercent: -0.77218336,
+    regularMarketTime: 1613768402,
+    regularMarketPrice: 781.3,
+    regularMarketDayHigh: 796.7899,
+    regularMarketDayRange: '777.39 - 796.7899',
+    regularMarketDayLow: 777.39,
+    regularMarketVolume: 18958255,
+    regularMarketPreviousClose: 787.38,
+    bid: 782.25,
+    ask: 782.5,
+    bidSize: 8,
+    askSize: 8,
+    fullExchangeName: 'NasdaqGS',
+    financialCurrency: 'USD',
+    regularMarketOpen: 795,
+    averageDailyVolume3Month: 41550022,
+    averageDailyVolume10Day: 22931542,
+    fiftyTwoWeekLowChange: 711.198,
+    fiftyTwoWeekLowChangePercent: 10.145188,
+    fiftyTwoWeekRange: '70.102 - 900.4',
+    fiftyTwoWeekHighChange: -119.10004,
+    fiftyTwoWeekHighChangePercent: -0.13227458,
+    fiftyTwoWeekLow: 70.102,
+    fiftyTwoWeekHigh: 900.4,
+    earningsTimestamp: 1611781200,
+    earningsTimestampStart: 1619521140,
+    earningsTimestampEnd: 1620043200,
+    trailingPE: 1220.7812,
+    epsTrailingTwelveMonths: 0.64,
+    epsForward: 5.41,
+    epsCurrentYear: 4.16,
+    priceEpsCurrentYear: 187.8125,
+    sharesOutstanding: 959854016,
+    bookValue: 23.151,
+    fiftyDayAverage: 825.7324,
+    marketCap: 749933953024,
+    firstTradeDateMilliseconds: 1277818200000,
+    priceHint: 2,
+    fiftyDayAverageChange: -44.432434,
+    fiftyDayAverageChangePercent: -0.053809725,
+    twoHundredDayAverage: 547.48566,
+    twoHundredDayAverageChange: 233.81433,
+    twoHundredDayAverageChangePercent: 0.42706934,
+    forwardPE: 144.41774,
+    priceToBook: 33.748005,
+    sourceInterval: 15,
+    exchangeDataDelayedBy: 0,
+    tradeable: false,
+    displayName: 'Tesla',
+    symbol: 'TSLA'
+  },
+  {
+    language: 'en-US',
+    region: 'US',
+    quoteType: 'EQUITY',
+    quoteSourceName: 'Delayed Quote',
+    triggerable: true,
+    currency: 'USD',
+    exchange: 'NMS',
+    shortName: 'Apple Inc.',
+    longName: 'Apple Inc.',
+    messageBoardId: 'finmb_24937',
+    exchangeTimezoneName: 'America/New_York',
+    exchangeTimezoneShortName: 'EST',
+    gmtOffSetMilliseconds: -18000000,
+    market: 'us_market',
+    esgPopulated: false,
+    marketState: 'POSTPOST',
+    epsCurrentYear: 4.45,
+    priceEpsCurrentYear: 29.184269,
+    sharesOutstanding: 16788100096,
+    bookValue: 3.936,
+    fiftyDayAverage: 133.6412,
+    fiftyDayAverageChange: -3.7712097,
+    fiftyDayAverageChangePercent: -0.028218914,
+    twoHundredDayAverage: 122.14779,
+    twoHundredDayAverageChange: 7.722206,
+    twoHundredDayAverageChangePercent: 0.06322019,
+    marketCap: 2180270522368,
+    forwardPE: 27.75,
+    priceToBook: 32.995426,
+    sourceInterval: 15,
+    exchangeDataDelayedBy: 0,
+    tradeable: false,
+    firstTradeDateMilliseconds: 345479400000,
+    priceHint: 2,
+    postMarketChangePercent: -0.11549542,
+    postMarketTime: 1613782798,
+    postMarketPrice: 129.72,
+    postMarketChange: -0.1499939,
+    regularMarketChange: 0.1599884,
+    regularMarketChangePercent: 0.123343155,
+    regularMarketTime: 1613768401,
+    regularMarketPrice: 129.87,
+    regularMarketDayHigh: 130.71,
+    regularMarketDayRange: '128.8 - 130.71',
+    regularMarketDayLow: 128.8,
+    regularMarketVolume: 87668834,
+    regularMarketPreviousClose: 129.71,
+    bid: 129.64,
+    ask: 129.74,
+    bidSize: 12,
+    askSize: 8,
+    fullExchangeName: 'NasdaqGS',
+    financialCurrency: 'USD',
+    regularMarketOpen: 130.24,
+    averageDailyVolume3Month: 103377978,
+    averageDailyVolume10Day: 78513914,
+    fiftyTwoWeekLowChange: 76.7175,
+    fiftyTwoWeekLowChangePercent: 1.443347,
+    fiftyTwoWeekRange: '53.1525 - 145.09',
+    fiftyTwoWeekHighChange: -15.220001,
+    fiftyTwoWeekHighChangePercent: -0.10490042,
+    fiftyTwoWeekLow: 53.1525,
+    fiftyTwoWeekHigh: 145.09,
+    dividendDate: 1613001600,
+    earningsTimestamp: 1611765000,
+    earningsTimestampStart: 1619607540,
+    earningsTimestampEnd: 1620043200,
+    trailingAnnualDividendRate: 0.807,
+    trailingPE: 35.22376,
+    trailingAnnualDividendYield: 0.0062215705,
+    epsTrailingTwelveMonths: 3.687,
+    epsForward: 4.68,
+    displayName: 'Apple',
+    symbol: 'AAPL'
+  }
+]
+```

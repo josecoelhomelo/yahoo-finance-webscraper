@@ -1,13 +1,13 @@
-## Installation
+Node.js module to fetch stock information from Yahoo Finance
 
-```shell
-$npm i yahoo-finance-webscraper
-```
+# Installation
+`npm install yahoo-finance-webscraper`
 
-## Usage
+# Usage
 
 ### getSingleStockInfo
 Retrieves information about a single stock symbol
+
 #### Single output
 ```js
 const yf = require('yahoo-finance-webscraper');
@@ -16,8 +16,10 @@ yf.getSingleStockInfo('AAPL').then(data => {
   console.log(data)
 });
 ```
+
 ### getStocksInfo
 Retrieves information about a multiple stock symbols
+
 #### Multiple outputs
 ```js
 const yf = require('yahoo-finance-webscraper');
@@ -28,10 +30,10 @@ yf.getStocksInfo(stocks).then(data => {
   console.log(data)
 });
 ```
-## Examples
+
+# Examples
 
 ### Single output example
-
 ```js
 {
   language: 'en-US',
@@ -111,7 +113,6 @@ yf.getStocksInfo(stocks).then(data => {
 ```
 
 ### Multiple output example
-
 ```js
 [
   {

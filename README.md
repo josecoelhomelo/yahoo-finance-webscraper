@@ -14,7 +14,7 @@ Retrieves information about a single stock symbol.
 const yahoo = require('yahoo-finance-webscraper');
 
 yahoo.getSingleStockInfo('AAPL').then(data => {
-  console.log(data)
+    console.log(data)
 });
 ```
 
@@ -24,10 +24,9 @@ Retrieves information about a multiple stock symbols.
 #### Multiple outputs
 ```js
 const yahoo = require('yahoo-finance-webscraper');
-const stocks = ['AAPL', 'TSLA'];
 
-yf.getStocksInfo(stocks).then(data => {
-  console.log(data)
+yahoo.getStocksInfo(['AAPL', 'TSLA']).then(data => {
+    console.log(data)
 });
 ```
 

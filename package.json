@@ -1,12 +1,11 @@
 {
     "dependencies": {
-        "axios": "^0.26.0"
+        "axios": "^0.26.1"
     },
     "name": "yahoo-finance-webscraper",
     "description": "Node.js module to fetch stock information from Yahoo Finance",
     "version": "2.0.3",
     "main": "app.js",
-    "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

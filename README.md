@@ -1,5 +1,5 @@
 Node.js module to fetch stock information from Yahoo Finance.
-<sub>Originally created by unknown author.</sub>
+<p><sup>Originally created by unknown author.</sup></p>
 
 # Installation
 `npm install yahoo-finance-webscraper`

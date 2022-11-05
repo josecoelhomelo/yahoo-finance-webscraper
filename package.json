@@ -1,28 +1,28 @@
 {
-  "dependencies": {
-    "axios": "^0.26.0"
-  },
-  "name": "yahoo-finance-webscraper",
-  "description": "Node.js module to fetch stock information from Yahoo Finance",
-  "version": "2.0.1",
-  "main": "app.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/josecoelhomelo/yahoo-finance-webscraper.git"
-  },
-  "keywords": [
-    "stocks",
-    "stock market scraper",
-    "yahoo finance"
-  ],
-  "author": "josecoelhomelo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/josecoelhomelo/yahoo-finance-webscraper/issues"
-  },
-  "homepage": "https://github.com/josecoelhomelo/yahoo-finance-webscraper#readme"
+    "dependencies": {
+        "axios": "^0.26.0"
+    },
+    "name": "yahoo-finance-webscraper",
+    "description": "Node.js module to fetch stock information from Yahoo Finance",
+    "version": "2.0.1",
+    "main": "app.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/josecoelhomelo/yahoo-finance-webscraper.git"
+    },
+    "keywords": [
+        "stocks",
+        "stock market scraper",
+        "yahoo finance"
+    ],
+    "author": "josecoelhomelo",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/josecoelhomelo/yahoo-finance-webscraper/issues"
+    },
+    "homepage": "https://github.com/josecoelhomelo/yahoo-finance-webscraper#readme"
 }
